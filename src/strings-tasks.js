@@ -52,8 +52,8 @@ function isString(value) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(...strings) {
-  return strings.join('');
+function concatenateStrings(str1, str2) {
+  return str1 + str2;
 }
 
 /**
@@ -97,8 +97,8 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   removeLeadingWhitespaces('cat ') => 'cat '
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
-function removeLeadingWhitespaces(value) {
-  return value ? value.replace(/^\s+/, '') : '';
+function removeLeadingWhitespaces(str) {
+  return str.trimStart();
 }
 
 /**
@@ -112,8 +112,8 @@ function removeLeadingWhitespaces(value) {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(value) {
-  return value ? value.replace(/\s+$/, '') : '';
+function removeTrailingWhitespaces(str) {
+  return str.trimEnd();
 }
 
 /**
